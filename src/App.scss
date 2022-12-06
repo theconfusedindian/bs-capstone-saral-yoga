@@ -1,3 +1,9 @@
+// Import of partials
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
+
+// React defaults
 .App {
   text-align: center;
   ul {
@@ -39,3 +45,87 @@
     transform: rotate(360deg);
   }
 }
+
+// project styling inputs
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Avenir;
+}
+
+body {
+  font-family: Avenir;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  color: $bfDBlack;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+/* default global styling for brainflix
+button {
+  background-color: $bfBlue;
+  color: $bfWhite;
+  width: 100%;
+  ::placeholder {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  @include tablet {
+    max-width: 150px;
+  }
+}
+
+textarea {
+  border-color: $bfSilver;
+  background-color: $bfAlabaster;
+  border-radius: 5px;
+  color: $bfDBlack;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: Avenir;
+  width: 100%;
+}
+::placeholder {
+  position: absolute;
+  color: $bfDBlack;
+  font-size: 12px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: $bfDBlack;
+} */
