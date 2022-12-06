@@ -1,0 +1,23 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.siteFooter {
+  padding: 0 1rem;
+  background-color: $battleship-grey;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  &__social {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__other {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+  &__credits {
+    display: flex;
+    justify-content: space-between;
+  }
+}
