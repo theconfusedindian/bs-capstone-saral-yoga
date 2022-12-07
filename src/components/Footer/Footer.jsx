@@ -29,17 +29,21 @@ export default function Footer() {
       </div>
       <div className="siteFooter__contact">
         <p className="siteFooter__contact--yogi">Yogi Harpreet Vohra</p>
-        <p className="siteFooter__contact--address">304-1260 Nelson St</p>
-        <p className="siteFooter__contact--address">Vancouver BC V6E 1J7</p>
+        {/* <p className="siteFooter__contact--address">304-1260 Nelson St</p>
+        <p className="siteFooter__contact--address">Vancouver BC V6E 1J7</p> */}
         <p className="siteFooter__contact--email">yogi.harpreet@gmail.com</p>
         <p className="siteFooter__contact--phone">+1 (604) 721-6322</p>
       </div>
-      <ul className="siteFooter__other">
-        <li className="siteFooter__other--item">Research</li>
-        <li className="siteFooter__other--item">Carers</li>
-        <li className="siteFooter__other--item">Blog</li>
-        <li className="siteFooter__other--item">Donate</li>
-      </ul>
+      <div className="siteFooter__other">
+        {/* <div className="siteFooter__other--box"> */}
+        <div className="siteFooter__other--item">Research</div>
+        <div className="siteFooter__other--item">Blog</div>
+        {/* </div> */}
+        {/* <div className="siteFooter__other--box"> */}
+        <div className="siteFooter__other--item">Carers</div>
+        <div className="siteFooter__other--item">Donate</div>
+        {/* </div> */}
+      </div>
       <div className="siteFooter__credits">
         <p className="siteFooter__credits--cr">©2022 Saral-Yoga</p>
         <p className="siteFooter__credits--cr">Privacy Policy</p>
