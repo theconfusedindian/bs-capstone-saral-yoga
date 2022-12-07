@@ -37,3 +37,10 @@
     justify-content: space-between;
   }
 }
+
+button {
+  background-color: $battleship-grey;
+  color: $white;
+  border: none;
+  cursor: pointer;
+}

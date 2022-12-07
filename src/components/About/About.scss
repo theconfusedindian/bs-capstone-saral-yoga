@@ -1,2 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.img {
+  width: 20rem;
+  height: 20rem;
+}
