@@ -20,14 +20,6 @@ export default function Contact() {
     Nav("/");
   };
 
-  //   state to store value from the input feild
-  const [inputValue, setInputValue] = useState("");
-
-  //  Reset field handler
-  const reset = (e) => {
-    setInputValue("");
-  };
-
   // pass states and actions to child components
   const [toSend, setToSend] = useState({
     your_name: "",
@@ -48,9 +40,6 @@ export default function Contact() {
       },
       function (error) {
         console.log("There is an error, please check your inputs!", error);
-      },
-      function reset() {
-        console.log("Form has been reset!");
       }
     );
   };
