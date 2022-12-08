@@ -5,6 +5,9 @@
 
 // React defaults
 .App {
+  background: url(./assets/images/body-background.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
   text-align: center;
   ul {
     list-style: none;

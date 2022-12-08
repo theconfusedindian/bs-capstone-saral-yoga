@@ -12,19 +12,22 @@
     padding: 0.5rem 1rem;
     justify-content: flex-start;
     &--label {
+      color: $dark-battleship-grey;
       display: flex;
       align-items: flex-start;
       padding-bottom: 0.3rem;
     }
     &--input,
     &--t-area {
-      border: 1px solid $battleship-grey;
+      border: none;
+      background-color: $light-battleship-grey;
       border-radius: 5px;
       outline: none;
       resize: none;
       padding: 0.5rem;
-      ::placeholder {
-        color: $battleship-grey;
+      &::placeholder {
+        color: $dark-battleship-grey;
+        opacity: 1;
       }
     }
     &--input {
@@ -37,13 +40,18 @@
     justify-content: space-between;
     padding: 1rem;
     &--submit {
+      background-color: $dark-battleship-grey;
+      color: $light-battleship-grey;
+      outline: none;
       width: 50%;
+      border: none;
       border-radius: 1.5625rem;
       padding: 0.5rem;
     }
     &--cancel {
-      background-color: $white;
-      color: $battleship-grey;
+      background-color: transparent;
+      border: none;
+      color: $dark-battleship-grey;
       width: 50%;
       border-radius: 1.5625rem;
       padding: 0.5rem;
