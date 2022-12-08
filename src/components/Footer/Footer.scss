@@ -3,7 +3,7 @@
 
 .siteFooter {
   padding: 0 1rem;
-  background-color: $battleship-grey;
+  background-color: $dark-battleship-grey;
   color: $white;
   display: flex;
   flex-direction: column;
@@ -38,9 +38,9 @@
   }
 }
 
-button {
-  background-color: $battleship-grey;
-  color: $white;
-  border: none;
-  cursor: pointer;
-}
+// button {
+//   background-color: $battleship-grey;
+//   color: $white;
+//   border: none;
+//   cursor: pointer;
+// }
