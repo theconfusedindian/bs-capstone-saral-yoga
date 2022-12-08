@@ -1,3 +1,4 @@
+// import of dependencies
 import {
   BrowserRouter,
   Router,
