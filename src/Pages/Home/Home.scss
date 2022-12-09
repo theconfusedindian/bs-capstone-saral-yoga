@@ -1,0 +1,39 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.home-page {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    width: 33%;
+    &--card {
+      width: 10.875rem;
+      height: 9.25rem;
+      background-color: $dark-battleship-grey;
+      border-radius: 5px;
+      overflow: hidden;
+      &-img {
+        opacity: 80%;
+        object-fit: cover;
+        width: 10.975rem;
+        height: 9.25rem;
+      }
+    }
+    &--title {
+      color: $dark-battleship-grey;
+    }
+    &--btn {
+      width: 10.875rem;
+      background-color: $dark-battleship-grey;
+      color: $light-battleship-grey;
+      border-radius: 1.5625rem;
+      padding: 0.5rem 0;
+    }
+  }
+}

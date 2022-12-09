@@ -37,6 +37,7 @@ export default function Contact() {
           response.status,
           response.text
         );
+        Nav("/");
       },
       function (error) {
         console.log("There is an error, please check your inputs!", error);
@@ -46,7 +47,6 @@ export default function Contact() {
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
-    send(toSend);
   };
 
   return (
