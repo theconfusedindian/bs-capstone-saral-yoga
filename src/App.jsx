@@ -13,6 +13,7 @@ import Home from "./Pages/Home/Home";
 // Import of components
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
+import Booking from "./components/Booking/Booking";
 import Contact from "./components/Contact-Form/Contact";
 import Footer from "./components/Footer/Footer";
 
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/book-now" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
