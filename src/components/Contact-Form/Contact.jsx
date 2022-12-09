@@ -7,17 +7,18 @@ import { send } from "emailjs-com";
 // import of styles
 import "./Contact.scss";
 
+// call of variables for emailJS IDs
 const serviceID = "service_2js51pv";
 const templateID = "template_c8wa585";
 const publicKey = "y_SvQKPx9DbDPRyYO";
 
 export default function Contact() {
-  const Nav = useNavigate();
+  const nav = useNavigate();
 
   // Cancel button func
   const CancelButton = (e) => {
     e.preventDefault();
-    Nav("/");
+    nav("/");
   };
 
   // pass states and actions to child components
@@ -37,7 +38,7 @@ export default function Contact() {
           response.status,
           response.text
         );
-        Nav("/");
+        nav("/");
       },
       function (error) {
         console.log("There is an error, please check your inputs!", error);
