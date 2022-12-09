@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.site-header {
+  padding: 2rem 1.5rem;
+  background-color: $dark-battleship-grey;
+  height: 8vh;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  //   &__logo {
+  //     inset: 0 0 1.25rem 0.625rem rgba(0, 0, 0, 0.6);
+  //   }
+  &__title {
+    font-size: 2rem;
+    color: $light-battleship-grey;
+  }
+  :active,
+  :hover,
+  :visited,
+  :link {
+    text-decoration: none;
+    color: $light-battleship-grey;
+  }
+}

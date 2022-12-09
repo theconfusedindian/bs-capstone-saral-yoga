@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // import of styling
 import "./Footer.scss";
 
@@ -5,6 +7,7 @@ import "./Footer.scss";
 import Insta from "../../assets/icons/Icon-instagram.svg";
 import FB from "../../assets/icons/Icon-facebook.svg";
 import Twitter from "../../assets/icons/Icon-twitter.svg";
+import Contact from "../Contact-Form/Contact";
 
 export default function Footer() {
   const openInNewTab = (url) => {
@@ -21,7 +24,11 @@ export default function Footer() {
   return (
     <div className="siteFooter">
       <div className="siteFooter__title">
-        <h1>Get in touch</h1>
+        <h1>
+          {/* <Link to={<Contact />}> */}
+          Get in touch
+          {/* </Link> */}
+        </h1>
       </div>
       <div className="siteFooter__social">
         <a href="http://instagram.com">
