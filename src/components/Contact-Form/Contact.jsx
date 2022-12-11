@@ -18,7 +18,7 @@ export default function Contact() {
   // Cancel button func
   const CancelButton = (e) => {
     e.preventDefault();
-    nav("/");
+    nav("/about");
   };
 
   // pass states and actions to child components

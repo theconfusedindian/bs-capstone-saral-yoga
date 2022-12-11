@@ -2,12 +2,38 @@
 @use "../../styles/partials/mixins" as *;
 
 .book {
-  padding: 10rem 3rem;
+  padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: $dark-battleship-grey;
+  max-width: 25rem;
+  &__title {
+    color: $dark-battleship-grey;
+    padding: 2rem 0;
+  }
   &__mobile {
     color: $dark-battleship-grey;
+    outline: none;
+  }
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    &--confirm {
+      background-color: $dark-battleship-grey;
+      color: $light-battleship-grey;
+      outline: none;
+      width: 50%;
+      border: none;
+      border-radius: 1.5625rem;
+      padding: 0.5rem;
+    }
+    &--cancel {
+      background-color: transparent;
+      border: none;
+      color: $dark-battleship-grey;
+      width: 50%;
+      border-radius: 1.5625rem;
+      padding: 0.5rem;
+    }
   }
 }
