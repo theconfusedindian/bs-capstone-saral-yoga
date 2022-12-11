@@ -17,7 +17,7 @@ export default function About() {
           Hello! I am Harpreet, I started practicing yoga in 2014, when I was
           going through a major life change that affected me deeply. Yoga is
           something that keeps me sane. I have completed my yoga teacher
-          training in{" "}
+          training in
           <a href="http://www.ashtangayogamysore.net/">Ashtanga Yoga</a> from
           Mysore, India in 2018. The reason I wanted to pursue the teacher
           training course was to expand my knowledge about Yoga, not only the
