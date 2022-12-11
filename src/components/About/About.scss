@@ -1,7 +1,35 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.img {
-  width: 20rem;
-  height: 20rem;
+.aboutPage {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+
+  &__yogi {
+    background-color: $light-battleship-grey;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+  }
+  &__intro {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-radius: 5px;
+    background-color: $light-battleship-grey;
+    padding: 1rem;
+    word-wrap: break-word;
+    color: $dark-battleship-grey;
+  }
+  &__connect {
+    background-color: $dark-battleship-grey;
+    color: $light-battleship-grey;
+    outline: none;
+    width: 100%;
+    border: none;
+    border-radius: 1.5625rem;
+    padding: 0.5rem;
+  }
 }

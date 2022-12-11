@@ -12,6 +12,24 @@ import "./Home.scss";
 export default function Home() {
   const nav = useNavigate();
 
+  // aboutCard
+  const aboutCard = (e) => {
+    e.preventDefault();
+    nav("/about");
+  };
+
+  // typesCard
+  const typesCard = (e) => {
+    e.preventDefault();
+    nav("/types");
+  };
+
+  // galleryCard
+  const galleryCard = (e) => {
+    e.preventDefault();
+    nav("/gallery");
+  };
+
   // Book Now button func
   const BookNow = (e) => {
     e.preventDefault();
@@ -20,7 +38,7 @@ export default function Home() {
   return (
     <div className="home-page">
       <div className="home-page__body">
-        <div className="home-page__body--card">
+        <div className="home-page__body--card" onClick={aboutCard}>
           <img
             className="home-page__body--card-img"
             src={aboutImg}
@@ -30,7 +48,7 @@ export default function Home() {
         <h2 className="home-page__body--title">About</h2>
       </div>
       <div className="home-page__body">
-        <div className="home-page__body--card">
+        <div className="home-page__body--card" onClick={typesCard}>
           <img
             className="home-page__body--card-img"
             src={typesImg}
@@ -39,7 +57,7 @@ export default function Home() {
         </div>
         <h2 className="home-page__body--title">Types of Yoga</h2>
       </div>
-      <div className="home-page__body">
+      <div className="home-page__body" onClick={galleryCard}>
         <div className="home-page__body--card">
           <img
             className="home-page__body--card-img"

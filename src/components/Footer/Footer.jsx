@@ -66,7 +66,7 @@ export default function Footer() {
         <div className="siteFooter__other--item">Blog</div>
         {/* </div> */}
         {/* <div className="siteFooter__other--box"> */}
-        <div className="siteFooter__other--item">Carers</div>
+        <div className="siteFooter__other--item">Careers</div>
         <div className="siteFooter__other--item">Donate</div>
         {/* </div> */}
       </div>
