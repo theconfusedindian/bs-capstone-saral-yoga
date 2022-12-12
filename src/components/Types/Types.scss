@@ -1,0 +1,28 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.types-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: $dark-battleship-grey;
+  &__intro {
+    background-color: $light-battleship-grey;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+  }
+  &__type {
+    &--card2 {
+      background-color: $light-battleship-grey;
+      color: $dark-battleship-grey;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+    &--card1 {
+      background-color: $dark-battleship-grey;
+      color: $light-battleship-grey;
+      border-radius: 5px;
+    }
+  }
+}
