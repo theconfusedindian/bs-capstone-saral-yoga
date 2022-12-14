@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .aboutPage {
-  max-width: 380px;
+  max-width: 25rem;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -31,5 +31,74 @@
     border: none;
     border-radius: 1.5625rem;
     padding: 0.5rem;
+  }
+  &__comments {
+    &--box {
+      padding: 0.5rem;
+    }
+
+    &--title {
+      margin: 0.5rem 0;
+      color: $dark-battleship-grey;
+    }
+
+    &--name {
+      display: flex;
+      justify-content: end;
+      font-style: italic;
+      font-weight: 600;
+      color: $dark-battleship-grey;
+      font-size: 12px;
+    }
+    &--review {
+      color: $dark-battleship-grey;
+      font-size: 12px;
+    }
+  }
+  &__review {
+    display: flex;
+    flex-direction: column;
+    &--t-area,
+    &--reviewer,
+    &--email {
+      margin: 0.5rem 0;
+      outline: none;
+      resize: none;
+      background-color: $light-battleship-grey;
+      color: $dark-battleship-grey;
+      border-radius: 5px;
+      padding: 0.5rem;
+      &::placeholder {
+        color: $dark-battleship-grey;
+      }
+    }
+    &--email,
+    &--reviewer {
+      padding: 0.5rem;
+      max-height: 1.5rem;
+    }
+
+    &--button {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      &--submit {
+        background-color: $dark-battleship-grey;
+        color: $light-battleship-grey;
+        outline: none;
+        width: 50%;
+        border: none;
+        border-radius: 1.5625rem;
+        padding: 0.5rem;
+      }
+      &--cancel {
+        background-color: transparent;
+        border: none;
+        color: $dark-battleship-grey;
+        width: 50%;
+        border-radius: 1.5625rem;
+        padding: 0.5rem;
+      }
+    }
   }
 }
