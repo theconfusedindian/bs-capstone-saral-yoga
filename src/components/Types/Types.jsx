@@ -1,3 +1,9 @@
+// import of trunket
+import Truncate from "react-truncate";
+
+// import {useState}
+import { useState } from "react";
+
 import surya from "../../assets/images/surya-namaskara.jpeg";
 
 import "./Types.scss";
@@ -8,6 +14,7 @@ export default function Types() {
       <h3 className="types-page__title">
         Learn about different types of Yoga practice
       </h3>
+
       <article className="types-page__intro">
         <p>
           “Plain and simple, yoga is the union between the body, mind, and

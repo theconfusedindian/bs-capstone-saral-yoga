@@ -8,11 +8,15 @@ export default function Header() {
       <Link to={"/"}>
         <img className="site-header__logo" src={logo} alt="logo" />
       </Link>
-
-      <h1 className="site-header__title">
-        {" "}
-        <Link to={"/"}>Saral-Yoga</Link>
-      </h1>
+      <div>
+        <h1 className="site-header__title">
+          {" "}
+          <Link to={"/"}>Saral-Yoga </Link>
+        </h1>
+        <h1 className="site-header__title--sanskrit">
+          <Link to={"/"}>सरल् योग​</Link>
+        </h1>
+      </div>
     </div>
   );
 }

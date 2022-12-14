@@ -1,0 +1,41 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.LPage {
+  margin: 1rem;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    &--nameBox,
+    &--pwdBox {
+      margin: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &--pwdBox,
+    &--nameBox {
+      &--input {
+        color: $dark-battleship-grey;
+        background-color: $light-battleship-grey;
+        outline: none;
+        border: none;
+        border-radius: 1.5625rem;
+        padding: 0.5rem;
+        &::placeholder {
+          color: $dark-battleship-grey;
+        }
+      }
+      &--label {
+        color: $dark-battleship-grey;
+        font-weight: 600;
+      }
+    }
+  }
+}

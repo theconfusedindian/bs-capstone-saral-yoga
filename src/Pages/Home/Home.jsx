@@ -31,9 +31,9 @@ export default function Home() {
   };
 
   // Book Now button func
-  const BookNow = (e) => {
+  const Login = (e) => {
     e.preventDefault();
-    nav("/book-now");
+    nav("/login");
   };
   return (
     <div className="home-page">
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
         <h2 className="home-page__body--title">Gallery</h2>
       </div>
-      <button className="home-page__body--btn" onClick={BookNow}>
+      <button className="home-page__body--btn" onClick={Login}>
         <h2>Book Now</h2>
       </button>
     </div>

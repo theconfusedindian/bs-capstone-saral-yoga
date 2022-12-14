@@ -4,7 +4,7 @@
 .siteFooter {
   padding: 0 1rem;
   background-color: $dark-battleship-grey;
-  color: $white;
+  color: $light-battleship-grey;
   display: flex;
   flex-direction: column;
   &__title {
@@ -14,9 +14,20 @@
     display: flex;
     justify-content: space-evenly;
     padding: 1rem 0;
+    &--icon {
+      fill: $light-battleship-grey;
+    }
   }
   &__contact {
     padding: 1rem 0;
+    color: $light-battleship-grey;
+
+    &--email {
+      color: $light-battleship-grey;
+      background-color: $dark-battleship-grey;
+      border: none;
+      outline: none;
+    }
   }
   &__other {
     // &--box {
@@ -31,10 +42,19 @@
     justify-content: space-between;
     padding-left: 0;
     padding: 1rem 0;
+    &--item {
+      color: $light-battleship-grey;
+    }
   }
   &__credits {
     display: flex;
     justify-content: space-between;
+    &--cr {
+      background-color: $dark-battleship-grey;
+      color: $light-battleship-grey;
+      border: none;
+      outline: none;
+    }
   }
 }
 

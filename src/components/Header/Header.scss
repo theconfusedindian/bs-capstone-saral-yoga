@@ -6,7 +6,8 @@
   background-color: $dark-battleship-grey;
   height: 8vh;
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  gap: 1rem;
   align-items: center;
   //   &__logo {
   //     inset: 0 0 1.25rem 0.625rem rgba(0, 0, 0, 0.6);
@@ -14,6 +15,9 @@
   &__title {
     font-size: 2rem;
     color: $light-battleship-grey;
+    &--sanskrit {
+      font-size: 18px;
+    }
   }
   :active,
   :hover,

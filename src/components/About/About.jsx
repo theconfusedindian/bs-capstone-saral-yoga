@@ -1,3 +1,4 @@
+import profileImg from "../../assets/images/about-profile.jpg";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -74,7 +75,7 @@ export default function About() {
 
   return (
     <div className="aboutPage">
-      <img className="aboutPage__yogi" src="" alt="yogi-image" />
+      <img className="aboutPage__yogi" src={profileImg} alt="yogi-image" />
       <article className="aboutPage__intro">
         <p>
           Hello! I am Harpreet, I started practicing yoga in 2014, when I was
