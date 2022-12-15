@@ -1,3 +1,7 @@
+import arrowIcon from "../../assets/icons/arrow-right-.svg";
+import appleIcon from "../../assets/icons/ri_apple-fillapple.svg";
+import googleIcon from "../../assets/icons/mdi_google-plusgplus.svg";
+
 // Import of dependencies
 import axios from "axios";
 import { useState } from "react";
@@ -5,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 // Import of styling
 import "./Login.scss";
+import SignUp from "../SignUp/SignUp";
 
 export default function Login() {
   const nav = useNavigate();
@@ -38,31 +43,61 @@ export default function Login() {
 
   return (
     <div className="LPage">
-      <form onSubmit={handleLogin} className="LPage_form">
-        <div className="LPage__form--nameBox">
-          <label className="LPage__form--nameBox--label" htmlFor="login">
+      <div>
+        <h3 className="LPage__title">Use email & password</h3>
+        <form onSubmit={handleLogin} className="LPage__form">
+          <div className="LPage__form--nameBox">
+            {/* <label className="LPage__form--nameBox--label" htmlFor="login">
             email/username
-          </label>
-          <input
-            className="LPage__form--nameBox--input"
-            type="text || email"
-            onChange={handleUserName}
-            placeholder="username or email"
-          />
-        </div>
-        <div className="LPage__form--pwdBox">
-          <label className="LPage__form--pwdBox--label" htmlFor="login">
+          </label> */}
+            <input
+              className="LPage__form--nameBox--input"
+              type="text || email"
+              onChange={handleUserName}
+              placeholder="username or email"
+            />
+          </div>
+          <div className="LPage__form--pwdBox">
+            {/* <label className="LPage__form--pwdBox--label" htmlFor="login">
             password
-          </label>
-          <input
-            className="LPage__form--pwdBox--input"
-            onChange={handlePassword}
-            placeholder="password"
+          </label> */}
+            <input
+              type="password"
+              className="LPage__form--pwdBox--input"
+              onChange={handlePassword}
+              placeholder="password"
+            />
+          </div>
+          <p>
+            *Don't have an account?
+            <span>
+              <a href="/signup">SignUp</a>
+            </span>{" "}
+            instead or see below for other options*
+          </p>
+          <button type="submit" className="LPage__form--arrow">
+            <img src={arrowIcon} alt="login-img" />
+          </button>
+        </form>
+      </div>
+      <div className="LPage__other">
+        <h3 className="LPage__title">Other ways to login</h3>
+        <div className="LPage__other--options">
+          <button className="LPage__other--guest" onClick={guestCard}>
+            Continue as a guest
+          </button>
+          <img
+            src={googleIcon}
+            alt="google-icon"
+            className="LPage__other--google"
+          />
+          <img
+            src={appleIcon}
+            alt="apple-icon"
+            className="LPage__other--apple"
           />
         </div>
-        <button>Login</button>
-      </form>
-      <button onClick={guestCard}>Continue as a guest</button>
+      </div>
     </div>
   );
 }

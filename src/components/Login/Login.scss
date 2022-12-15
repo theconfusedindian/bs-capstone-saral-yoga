@@ -6,8 +6,14 @@
   max-width: 25rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  //   align-items: center;
+  justify-content: space-between;
+  &__title {
+    display: flex;
+    padding-left: 0.5rem;
+  }
   &__form {
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     &--nameBox,
@@ -17,6 +23,13 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+    }
+    &--arrow {
+      border-radius: 50%;
+      max-height: 1.5rem;
+      max-width: 1.5rem;
+      display: flex;
+      align-self: flex-end;
     }
 
     &--pwdBox,
@@ -35,7 +48,33 @@
       &--label {
         color: $dark-battleship-grey;
         font-weight: 600;
+        padding-left: 0.5rem;
       }
+    }
+  }
+  &__other {
+    &--options {
+      display: flex;
+
+      // flex-direction: column;
+    }
+    &--guest {
+      color: $dark-battleship-grey;
+      background-color: $light-battleship-grey;
+      outline: none;
+      border: none;
+      border-radius: 1.5625rem;
+      padding: 0.5rem;
+      margin: 0.5rem;
+    }
+    &--google,
+    &--apple {
+      background-color: $dark-battleship-grey;
+      max-width: 1.5rem;
+      max-height: 1.5rem;
+      border-radius: 50%;
+      padding: 0.3rem;
+      margin: 0.5rem;
     }
   }
 }

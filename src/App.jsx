@@ -14,6 +14,7 @@ import Home from "./Pages/Home/Home";
 import Header from "./components/Header/Header";
 // Homepage components
 import About from "./components/About/About";
+import SignUp from "./components/SignUp/SignUp";
 import Login from "./components/Login/Login";
 import Types from "./components/Types/Types";
 import Gallery from "./components/Gallery/Gallery";
@@ -32,6 +33,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/types" element={<Types />} />
