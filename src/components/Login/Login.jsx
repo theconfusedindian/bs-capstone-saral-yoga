@@ -68,6 +68,10 @@ export default function Login() {
               placeholder="password"
             />
           </div>
+
+          <button type="submit" className="LPage__form--arrow">
+            <img src={arrowIcon} alt="login-img" />
+          </button>
           <p>
             *Don't have an account?
             <span>
@@ -75,9 +79,6 @@ export default function Login() {
             </span>{" "}
             instead or see below for other options*
           </p>
-          <button type="submit" className="LPage__form--arrow">
-            <img src={arrowIcon} alt="login-img" />
-          </button>
         </form>
       </div>
       <div className="LPage__other">

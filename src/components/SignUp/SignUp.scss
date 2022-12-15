@@ -1,2 +1,32 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.signup__form {
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--input1 {
+    margin: 0.5rem;
+    color: $dark-battleship-grey;
+    background-color: $light-battleship-grey;
+    outline: none;
+    border: none;
+    border-radius: 1.5625rem;
+    padding: 0.5rem;
+    &::placeholder {
+      color: $dark-battleship-grey;
+    }
+  }
+  &--input2 {
+    color: $light-battleship-grey;
+    background-color: $dark-battleship-grey;
+    outline: none;
+    border: none;
+    border-radius: 1.5625rem;
+    padding: 0.5rem;
+    &::placeholder {
+      color: $light-battleship-grey;
+    }
+  }
+}

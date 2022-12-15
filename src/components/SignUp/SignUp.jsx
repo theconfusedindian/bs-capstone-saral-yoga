@@ -54,38 +54,43 @@ export default function SignUp() {
   };
 
   return (
-    <form onSubmit={handleSignUp}>
+    <form onSubmit={handleSignUp} className="signup__form">
       <input
         type="text"
         placeholder="your name"
         onChange={handleName}
         value={suname}
+        className="signup__form--input1"
       />
       <input
         type="text"
         placeholder="username"
         onChange={handleUserName}
         value={suusername}
+        className="signup__form--input2"
       />
       <input
         type="email"
         placeholder="email address"
         onChange={handleEmail}
         value={suemail}
+        className="signup__form--input1"
       />
       <input
         type="text"
         placeholder="password"
         onChange={handlePassword}
         value={supassword}
+        className="signup__form--input2"
       />
       <input
         type="text"
         placeholder="confirm password"
         onChange={handleConfirmPassword}
         value={suconfirmPassword}
+        className="signup__form--input1"
       />
-      <button>Submit</button>
+      <button className="signup__form--submit">Submit</button>
     </form>
   );
 }
