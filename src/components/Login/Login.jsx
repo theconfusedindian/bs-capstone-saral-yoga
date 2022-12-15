@@ -43,8 +43,14 @@ export default function Login() {
 
   return (
     <div className="LPage">
+      <p>
+        *Don't have an account?
+        <span>
+          <a href="/signup">SignUp</a>
+        </span>{" "}
+        instead or see below for other options*
+      </p>
       <div>
-        <h3 className="LPage__title">Use email & password</h3>
         <form onSubmit={handleLogin} className="LPage__form">
           <div className="LPage__form--nameBox">
             {/* <label className="LPage__form--nameBox--label" htmlFor="login">
@@ -72,13 +78,6 @@ export default function Login() {
           <button type="submit" className="LPage__form--arrow">
             <img src={arrowIcon} alt="login-img" />
           </button>
-          <p>
-            *Don't have an account?
-            <span>
-              <a href="/signup">SignUp</a>
-            </span>{" "}
-            instead or see below for other options*
-          </p>
         </form>
       </div>
       <div className="LPage__other">

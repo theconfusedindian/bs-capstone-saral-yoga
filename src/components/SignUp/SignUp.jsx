@@ -52,6 +52,11 @@ export default function SignUp() {
       alert("Please check all details and try again");
     }
   };
+  //   cancel button
+  const cancelButton = (e) => {
+    e.preventDefault();
+    window.history.go(-1);
+  };
 
   return (
     <form onSubmit={handleSignUp} className="signup__form">
@@ -90,7 +95,12 @@ export default function SignUp() {
         value={suconfirmPassword}
         className="signup__form--input1"
       />
-      <button className="signup__form--submit">Submit</button>
+      <div className="signup__form--buttons">
+        <button onClick={cancelButton} className="signup__form--cancel">
+          Cancel
+        </button>
+        <button className="signup__form--submit">Submit</button>
+      </div>
     </form>
   );
 }
