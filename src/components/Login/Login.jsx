@@ -13,13 +13,15 @@ import SignUp from "../SignUp/SignUp";
 
 export default function Login() {
   const nav = useNavigate();
+  const API_URL = "http://localhost:3001";
 
   //   useStates for username and password and create functions
-  const [userName, setUserName] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [userData, setUserData] = useState("");
 
-  const handleUserName = function (e) {
-    setUserName(e.target.value);
+  const handleUsername = function (e) {
+    setUsername(e.target.value);
   };
   const handlePassword = function (e) {
     setPassword(e.target.value);
@@ -28,10 +30,19 @@ export default function Login() {
   //   handleOnSubmit
   const handleLogin = (e) => {
     e.preventDefault();
-    if (!userName || !password) {
+    if (!username || !password) {
       alert("You mush provide both username and password!");
     } else {
-      nav("/book-now");
+      axios
+        .post(`${API_URL}/users/login`, {
+          username: username,
+          password: password,
+        })
+        .then((response) => {
+          console.log(response.data);
+          nav("/book-now");
+          // console.log(userData);
+        });
     }
   };
 
@@ -58,9 +69,10 @@ export default function Login() {
           </label> */}
             <input
               className="LPage__form--nameBox--input"
-              type="text || email"
-              onChange={handleUserName}
-              placeholder="username or email"
+              type="username"
+              onChange={handleUsername}
+              value={username}
+              placeholder="username"
             />
           </div>
           <div className="LPage__form--pwdBox">
@@ -71,6 +83,7 @@ export default function Login() {
               type="password"
               className="LPage__form--pwdBox--input"
               onChange={handlePassword}
+              value={password}
               placeholder="password"
             />
           </div>

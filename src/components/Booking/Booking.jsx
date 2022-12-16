@@ -12,9 +12,18 @@ import { useState } from "react";
 
 // import of styling
 import "./Booking.scss";
+import axios from "axios";
 
 export default function ResponsiveDatePickers() {
+  const API_URL = "http://localhost:3001";
   const nav = useNavigate();
+  // timeslot
+  const [timeslot, setTimeslot] = useState("");
+
+  const handleTimeslot = (e) => {
+    setTimeslot(e.target.value);
+  };
+
   // handle change
   const handleChange = (newValue) => {
     setValue(newValue);
@@ -27,60 +36,84 @@ export default function ResponsiveDatePickers() {
   };
 
   // confirm button
-  const onSubmit = (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     console.log("AM I WORKING");
+    const booking = {
+      date: value,
+      time_slot: timeslot,
+    };
+    axios.post(`${API_URL}/bookings`, booking);
+    console.log(booking);
   };
 
   const [value, setValue] = React.useState(dayjs());
 
   return (
     <div className="book">
-      <h2 className="book__title">Book Now</h2>
+      <h3 className="book__title">Book Now</h3>
 
       {/* Date & time pickers */}
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <Stack spacing={4}>
-          {/* responsive date picker */}
-          <DatePicker
-            className="book__mobile"
-            disablePast
-            // label="Pick a date"
-            openTo="day"
-            views={["year", "month", "day"]}
-            value={value}
-            onChange={(newValue) => {
-              setValue(newValue);
-            }}
-            renderInput={(params) => <TextField {...params} />}
-          />
-        </Stack>
-      </LocalizationProvider>
-      <h2 className="book__time--title">Pick a time</h2>
-      <div className="book__time">
-        <div className="book__time--slot">
-          <input type="radio" name="timeSlot"></input>
-          <label htmlFor="input">6.00AM - 6.50AM</label>
+      <form onSubmit={handleOnSubmit}>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <Stack spacing={4}>
+            {/* responsive date picker */}
+            <DatePicker
+              className="book__mobile"
+              disablePast
+              // label="Pick a date"
+              openTo="day"
+              views={["year", "month", "day"]}
+              value={value}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          </Stack>
+        </LocalizationProvider>
+        {/* select timeslot */}
+        <h2 className="book__time--title">Pick a time</h2>
+        <div className="book__time">
+          <div className="book__time--slot">
+            <input
+              type="radio"
+              name="timeSlot"
+              onChange={handleTimeslot}
+              value="6.00AM - 6.50AM"
+            />
+            6.00AM - 6.50AM
+          </div>
+          <div className="book__time--slot">
+            <input
+              type="radio"
+              name="timeSlot"
+              onChange={handleTimeslot}
+              value="7.00AM - 7.50AM"
+            />
+            7.00AM - 7.50AM
+          </div>
+          <div className="book__time--slot">
+            <input
+              type="radio"
+              name="timeSlot"
+              onChange={handleTimeslot}
+              value="8.00AM - 8.50AM"
+            />
+            8.00AM - 8.50AM
+          </div>
         </div>
-        <div className="book__time--slot">
-          <input type="radio" name="timeSlot"></input>
-          <label htmlFor="">7.00AM - 7.50AM</label>
-        </div>
-        <div className="book__time--slot">
-          <input type="radio" name="timeSlot"></input>
-          <label htmlFor="">8.00AM - 8.50AM</label>
-        </div>
-      </div>
 
-      {/* buttons */}
-      <div className="book__button">
-        <button className="book__button--cancel" onClick={CancelButton}>
-          <h3>Cancel</h3>
-        </button>
-        <button type="submit" className="book__button--confirm">
-          <h3>Confirm</h3>
-        </button>
-      </div>
+        {/* buttons */}
+        <div className="book__button">
+          <button className="book__button--cancel" onClick={CancelButton}>
+            <h3>Cancel</h3>
+          </button>
+          <button type="submit" className="book__button--confirm">
+            <h3>Confirm</h3>
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
