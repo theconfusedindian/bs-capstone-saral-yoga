@@ -2,10 +2,15 @@
 @use "../../styles/partials/mixins" as *;
 
 .book {
+  margin: auto;
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: 25rem;
+  @include desktop {
+    min-height: 28rem;
+  }
   &__title {
     color: $dark-battleship-grey;
     padding: 1rem 1rem 0.25rem 0;

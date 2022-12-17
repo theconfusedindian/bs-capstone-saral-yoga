@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .aboutPage {
+  margin: auto;
   max-width: 25rem;
   display: flex;
   flex-direction: column;
@@ -17,6 +18,7 @@
     height: 10rem;
     size: cover;
     opacity: 90%;
+    margin: auto;
   }
   &__intro {
     margin: 2rem 0;
