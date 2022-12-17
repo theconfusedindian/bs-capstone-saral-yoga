@@ -9,14 +9,12 @@
   align-items: center;
 
   &__yogi {
-    background-color: $light-battleship-grey;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
-    overflow: hidden;
     size: cover;
     opacity: 90%;
   }

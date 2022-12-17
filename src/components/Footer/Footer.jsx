@@ -1,15 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // import of styling
 import "./Footer.scss";
 
 // Import of SVG Images
+import email from "../../assets/icons/email.svg";
+import phone from "../../assets/icons/phone.svg";
 import Insta from "../../assets/icons/Icon-instagram.svg";
 import FB from "../../assets/icons/Icon-facebook.svg";
 import Twitter from "../../assets/icons/Icon-twitter.svg";
 import Contact from "../Contact-Form/Contact";
 
 export default function Footer() {
+  const nav = useNavigate();
+
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -44,29 +48,32 @@ export default function Footer() {
             className="siteFooter__social--icon"
           />
         </a>
-      </div>
-      <div className="siteFooter__contact">
-        <p className="siteFooter__contact--yogi">Yogi Harpreet Vohra</p>
-        {/* <p className="siteFooter__contact--address">304-1260 Nelson St</p>
-        <p className="siteFooter__contact--address">Vancouver BC V6E 1J7</p> */}
-        <button
+        <img
+          src={email}
           className="siteFooter__contact--email"
           onClick={(e) => {
             e.preventDefault();
             sendEmail("yogi.harpreet@gmail.com");
           }}
-        >
-          yogi.harpreet@gmail.com
-        </button>
-        <p className="siteFooter__contact--phone">+1 (604) 721-6322</p>
+        />
+        <img src={phone} className="siteFooter__contact--phone" />
       </div>
+
       <div className="siteFooter__other">
         {/* <div className="siteFooter__other--box"> */}
         <div className="siteFooter__other--item">Research</div>
         <div className="siteFooter__other--item">Blog</div>
         {/* </div> */}
         {/* <div className="siteFooter__other--box"> */}
-        <div className="siteFooter__other--item">Careers</div>
+        <div
+          className="siteFooter__other--item"
+          onClick={(e) => {
+            e.preventDefault();
+            nav("/wip");
+          }}
+        >
+          Careers
+        </div>
         <div className="siteFooter__other--item">Donate</div>
         {/* </div> */}
       </div>
@@ -89,5 +96,3 @@ export default function Footer() {
     </div>
   );
 }
-
-// Privacy policy: https://www.privacypolicies.com/live/a4f9814e-f036-4b1a-a1dc-8ca431f9d9aa

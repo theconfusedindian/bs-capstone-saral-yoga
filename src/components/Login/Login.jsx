@@ -41,7 +41,7 @@ export default function Login() {
         .then((response) => {
           console.log(response.data);
           nav("/book-now");
-          // console.log(userData);
+          console.log(userData);
         });
     }
   };
@@ -57,6 +57,7 @@ export default function Login() {
       <p>
         *Don't have an account?
         <span>
+          {" "}
           <a href="/signup">SignUp</a>
         </span>{" "}
         instead or see below for other options*
@@ -64,9 +65,6 @@ export default function Login() {
       <div>
         <form onSubmit={handleLogin} className="LPage__form">
           <div className="LPage__form--nameBox">
-            {/* <label className="LPage__form--nameBox--label" htmlFor="login">
-            email/username
-          </label> */}
             <input
               className="LPage__form--nameBox--input"
               type="username"
@@ -76,9 +74,6 @@ export default function Login() {
             />
           </div>
           <div className="LPage__form--pwdBox">
-            {/* <label className="LPage__form--pwdBox--label" htmlFor="login">
-            password
-          </label> */}
             <input
               type="password"
               className="LPage__form--pwdBox--input"
