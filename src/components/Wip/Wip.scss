@@ -5,9 +5,16 @@
   max-width: 400px;
   flex-direction: column;
   align-items: center;
+  min-height: 21rem;
+  color: $dark-battleship-grey;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin: 2rem 0;
+  }
   &__media {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
   }
 }

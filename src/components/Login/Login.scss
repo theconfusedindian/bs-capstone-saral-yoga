@@ -2,15 +2,22 @@
 @use "../../styles/partials/mixins" as *;
 
 .LPage {
-  margin: 1rem;
+  margin: 3rem 1rem;
   max-width: 25rem;
   display: flex;
   flex-direction: column;
-  //   align-items: center;
-  justify-content: space-between;
-  &__title {
+  align-items: center;
+  &__signup {
+    line-height: 10px;
+  }
+  &__wrapper {
+    margin-bottom: 1rem;
+  }
+  &__title,
+  &__query {
     display: flex;
     padding-left: 0.5rem;
+    color: $dark-battleship-grey;
   }
   &__form {
     max-width: 50%;
@@ -20,7 +27,6 @@
     &--pwdBox {
       margin: 0.5rem;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
     }
@@ -30,6 +36,9 @@
       max-width: 1.5rem;
       display: flex;
       align-self: flex-end;
+      &--img {
+        border-radius: 50%;
+      }
     }
 
     &--pwdBox,
@@ -53,12 +62,16 @@
     }
   }
   &__other {
+    &--title {
+      padding-bottom: 0.5rem;
+    }
     &--options {
       display: flex;
     }
     &--guest {
-      color: $dark-battleship-grey;
-      background-color: $light-battleship-grey;
+      background-color: $dark-battleship-grey;
+      color: $light-battleship-grey;
+      font-weight: 600;
       outline: none;
       border: none;
       border-radius: 1.5625rem;

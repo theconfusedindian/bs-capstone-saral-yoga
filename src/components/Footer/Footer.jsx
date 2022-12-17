@@ -25,6 +25,16 @@ export default function Footer() {
     a.click();
   };
 
+  const handleFooterClick = (e) => {
+    e.preventDefault();
+    nav("/wip");
+  };
+
+  const handlePrivacy = (e) => {
+    e.preventDefault();
+    nav("/");
+  };
+
   return (
     <div className="siteFooter">
       <div className="siteFooter__title">
@@ -60,22 +70,19 @@ export default function Footer() {
       </div>
 
       <div className="siteFooter__other">
-        {/* <div className="siteFooter__other--box"> */}
-        <div className="siteFooter__other--item">Research</div>
-        <div className="siteFooter__other--item">Blog</div>
-        {/* </div> */}
-        {/* <div className="siteFooter__other--box"> */}
-        <div
-          className="siteFooter__other--item"
-          onClick={(e) => {
-            e.preventDefault();
-            nav("/wip");
-          }}
-        >
+        <div className="siteFooter__other--item" onClick={handleFooterClick}>
+          Research
+        </div>
+        <div className="siteFooter__other--item" onClick={handleFooterClick}>
+          Blog
+        </div>
+
+        <div className="siteFooter__other--item" onClick={handleFooterClick}>
           Careers
         </div>
-        <div className="siteFooter__other--item">Donate</div>
-        {/* </div> */}
+        <div className="siteFooter__other--item" onClick={handleFooterClick}>
+          Donate
+        </div>
       </div>
       <div className="siteFooter__credits">
         <p className="siteFooter__credits--cr">©2022 Saral-Yoga</p>
@@ -91,7 +98,6 @@ export default function Footer() {
         >
           Privacy Policy
         </button>
-        {/* <p className="siteFooter__credits--cr">Privacy Policy</p> */}
       </div>
     </div>
   );

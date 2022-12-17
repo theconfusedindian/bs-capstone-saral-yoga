@@ -2,8 +2,8 @@ import "./Wip.scss";
 
 export default function Wip() {
   return (
-    <body>
-      <h1 className="wipPage">
+    <body className="wipPage">
+      <h1 className="wipPage__title">
         This page is under construction, please come back later
       </h1>
       <div className="wipPage__media">

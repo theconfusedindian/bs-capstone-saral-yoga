@@ -54,15 +54,15 @@ export default function Login() {
 
   return (
     <div className="LPage">
-      <p>
-        *Don't have an account?
+      <p className="LPage__query">*Don't have an account? </p>
+      <p className="LPage__query">
         <span>
           {" "}
-          <a href="/signup">SignUp</a>
+          <a href="/signup">SignUp </a>
         </span>{" "}
         instead or see below for other options*
       </p>
-      <div>
+      <div className="LPage__wrapper">
         <form onSubmit={handleLogin} className="LPage__form">
           <div className="LPage__form--nameBox">
             <input
@@ -82,14 +82,17 @@ export default function Login() {
               placeholder="password"
             />
           </div>
-
           <button type="submit" className="LPage__form--arrow">
-            <img src={arrowIcon} alt="login-img" />
+            <img
+              className="LPage__form--arrow--img"
+              src={arrowIcon}
+              alt="login-img"
+            />
           </button>
         </form>
       </div>
       <div className="LPage__other">
-        <h3 className="LPage__title">Other ways to login</h3>
+        <h3 className="LPage__other--title">Other ways to login</h3>
         <div className="LPage__other--options">
           <button className="LPage__other--guest" onClick={guestCard}>
             Continue as a guest
