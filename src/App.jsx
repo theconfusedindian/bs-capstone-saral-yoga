@@ -22,6 +22,7 @@ import Booking from "./components/Booking/Booking";
 import Contact from "./components/Contact-Form/Contact";
 import Footer from "./components/Footer/Footer";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
+import Wip from "./components/Wip/Wip";
 
 // Import of styling
 import "./App.scss";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/reviews/:id" element={<Home />} />
+          <Route path="/wip" element={<Wip />} />
         </Routes>
         <Footer />
       </BrowserRouter>

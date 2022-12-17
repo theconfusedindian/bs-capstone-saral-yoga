@@ -7,13 +7,15 @@
   color: $light-battleship-grey;
   display: flex;
   flex-direction: column;
+  border-radius: 50px 50px 0 0;
+
   &__title {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   &__social {
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     &--icon {
       fill: $light-battleship-grey;
     }
