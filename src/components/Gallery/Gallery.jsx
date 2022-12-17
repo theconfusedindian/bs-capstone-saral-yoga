@@ -14,15 +14,33 @@ import "./Gallery.scss";
 export default function Gallery() {
   return (
     <div className="gallery">
-      <img src={img1} alt="galley_img" className="gallery_img" />
-      <img src={img2} alt="galley_img" className="gallery_img" />
-      <img src={img3} alt="galley_img" className="gallery_img" />
-      <img src={img4} alt="galley_img" className="gallery_img" />
-      <img src={img5} alt="galley_img" className="gallery_img" />
-      <img src={img6} alt="galley_img" className="gallery_img" />
-      <img src={img7} alt="galley_img" className="gallery_img" />
-      <img src={img8} alt="galley_img" className="gallery_img" />
-      <img src={img9} alt="galley_img" className="gallery_img" />
+      <div className="gallery__container">
+        <img src={img1} alt="galley_img" className="gallery__container--img" />
+      </div>
+      <div className="gallery__container">
+        <img src={img2} alt="galley_img" className="gallery__container--img" />
+      </div>
+      <div className="gallery__container">
+        <img src={img3} alt="galley_img" className="gallery__container--img" />
+      </div>
+      <div className="gallery__container">
+        <img src={img4} alt="galley_img" className="gallery__container--img" />
+      </div>
+      <div className="gallery__container">
+        <img src={img5} alt="galley_img" className="gallery__container--img" />
+      </div>
+      <div className="gallery__container">
+        <img src={img6} alt="galley_img" className="gallery__container--img" />
+      </div>
+      <div className="gallery__container">
+        <img src={img7} alt="galley_img" className="gallery__container--img" />
+      </div>
+      <div className="gallery__container">
+        <img src={img8} alt="galley_img" className="gallery__container--img" />
+      </div>
+      <div className="gallery__container">
+        <img src={img9} alt="galley_img" className="gallery__container--img" />
+      </div>
     </div>
   );
 }

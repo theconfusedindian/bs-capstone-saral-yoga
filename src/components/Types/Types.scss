@@ -2,11 +2,17 @@
 @use "../../styles/partials/mixins" as *;
 
 .types-page {
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
   color: $dark-battleship-grey;
+  @include tablet {
+    max-width: 40.625rem;
+  }
   &__intro {
     background-color: $light-battleship-grey;
     border-radius: 5px;

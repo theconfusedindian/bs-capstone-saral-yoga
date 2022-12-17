@@ -2,11 +2,16 @@
 @use "../../styles/partials/mixins" as *;
 
 .LPage {
-  margin: 3rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 25rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  @include desktop {
+    min-height: 28rem;
+  }
   &__signup {
     line-height: 10px;
   }
